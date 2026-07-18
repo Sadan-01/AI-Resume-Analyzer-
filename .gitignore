@@ -1,0 +1,68 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+
+# SQLite Database
+*.db
+*.sqlite3
+
+# Uploads
+uploads/
+
+# Logs
+*.log
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# =========================
+# React / Node
+# =========================
+frontend/node_modules/
+node_modules/
+
+# Build folders
+frontend/dist/
+dist/
+build/
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vite
+.vite/
+
+# Coverage
+coverage/
+
+# =========================
+# Misc
+# =========================
+*.tmp
+*.temp
+.cache/

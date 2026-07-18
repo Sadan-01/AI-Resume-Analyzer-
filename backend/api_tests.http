@@ -1,0 +1,28 @@
+### 1. Register a New User
+POST http://127.0.0.1:8000/auth/register
+Content-Type: application/json
+
+{
+  "full_name": "PyCharm User",
+  "email": "pycharm.test@example.com",
+  "password": "securepassword123"
+}
+
+### 2. Login User (This automatically saves the JWT token for subsequent requests)
+POST http://127.0.0.1:8000/auth/login
+Content-Type: application/json
+
+{
+  "email": "pycharm.test@example.com",
+  "password": "securepassword123"
+}
+
+> {% client.global.set("auth_token", response.body.data.access_token); %}
+
+### 3. Get Current Logged-in User Profile
+GET http://127.0.0.1:8000/auth/me
+Authorization: Bearer {{auth_token}}
+
+### 4. Fetch User Dashboard Statistics
+GET http://127.0.0.1:8000/dashboard
+Authorization: Bearer {{auth_token}}
